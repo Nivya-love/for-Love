@@ -80,18 +80,17 @@ function noClick() {
   alert("You don’t have any option 😌 You are supposed to click YES ❤️");
 }
 </script>
-<audio controls preload="auto">
+<audio id="loveSong" preload="auto">
   <source src="song.mp3" type="audio/mpeg">
-  Your browser does not support audio.
 </audio>
 
 <script>
   function playSong() {
-  const song = document.getElementById("loveSong");
-  song.muted = false;
-  song.volume = 1;
-  song.play().catch(() => {});
-}
+    const song = document.getElementById("loveSong");
+    song.currentTime = 0;
+    song.volume = 1;
+    song.play().catch(() => {});
+  }
 </script>
 </body>
 </html>
