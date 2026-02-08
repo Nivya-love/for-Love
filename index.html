@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For Rahul ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .screen {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    #blackScreen {
+      background: black;
+      color: white;
+    }
+    #mainScreen {
+      background: #fff0f5;
+      display: none;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      margin: 10px;
+      cursor: pointer;
+      border-radius: 8px;
+      border: none;
+    }
+    .brightBtn { background: white; color: black; }
+    .yesBtn { background: #ff4d88; color: white; }
+    .noBtn { background: #cccccc; }
+    img {
+      width: 200px;
+      margin: 10px;
+      border: 5px solid pink;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<audio id="bgMusic" src="song.mp3"></audio>
+
+<div id="blackScreen" class="screen">
+  <h2>Click here to make my life brighter 🖤</h2>
+  <button class="brightBtn" onclick="goNext()">Click here</button>
+</div>
+
+<div id="mainScreen" class="screen">
+  <h1>Happy Valentine’s Day ❤️</h1>
+  <h2>Will you marry me?</h2>
+
+  <button class="yesBtn" onclick="yesClick()">YES 💍</button>
+  <button class="noBtn" onclick="noClick()">NO 🙈</button>
+
+  <div id="result"></div>
+</div>
+
+<script>
+function goNext() {
+  document.getElementById("blackScreen").style.display = "none";
+  document.getElementById("mainScreen").style.display = "flex";
+  document.getElementById("bgMusic").play();
+}
+
+function yesClick() {
+  document.getElementById("result").innerHTML = `
+    <h2>We’ll get married soon 💖</h2>
+    <img src="old.jpg">
+    <img src="new.jpg">
+  `;
+}
+
+function noClick() {
+  alert("You don’t have any option 😌 You are supposed to click YES ❤️");
+}
+</script>
+
+</body>
+</html>
