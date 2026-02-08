@@ -46,8 +46,6 @@
 
 <body>
 
-<audio id="bgMusic" src="song.mp3"></audio>
-
 <div id="blackScreen" class="screen">
   <h2>Click here to make my life brighter 🖤</h2>
   <button class="brightBtn" onclick="goNext()">Click here</button>
@@ -67,14 +65,14 @@
 function goNext() {
   document.getElementById("blackScreen").style.display = "none";
   document.getElementById("mainScreen").style.display = "flex";
-  document.getElementById("bgMusic").play();
 }
 
 function yesClick() {
   document.getElementById("result").innerHTML = `
     <h2>We’ll get married soon 💖</h2>
-    <img src="old.jpg">
-    <img src="new.jpg">
+    <img src="dream1.jpg">
+    <img src="dream2.jpg">
+    <img src="dream3.jpg">
   `;
 }
 
