@@ -55,7 +55,7 @@
   <h1>Happy Valentine’s Day ❤️</h1>
   <h2>Will you marry me?</h2>
 
-  <button class="yesBtn" onclick="yesClick()">YES 💍</button>
+  <button class="yesBtn" onclick="yesClick(); playSong();">YES 💍</button>
   <button class="noBtn" onclick="noClick()">NO 🙈</button>
 
   <div id="result"></div>
@@ -80,7 +80,7 @@ function noClick() {
   alert("You don’t have any option 😌 You are supposed to click YES ❤️");
 }
 </script>
-<audio id="loveSong">
+<audio id="loveSong" preload="auto">
   <source src="song.mp3" type="audio/mpeg">
 </audio>
 
